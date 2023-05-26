@@ -15,7 +15,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/co3")
+@RequestMapping("/co4")
 public class Controller4 {
     //this is non-blocking controller with routerFunction error handling ...
     private final ServiceNonBlock serviceNonBlock;
