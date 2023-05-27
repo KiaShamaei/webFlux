@@ -19,7 +19,7 @@ public class ServiceNonBlockRouter {
 
         String input = request.pathVariable("input");
         if(Integer.parseInt(input) > 5)
-            throw  new InputExceptionRouter(Integer.parseInt(input));
+            return Mono.error( new InputExceptionRouter(Integer.parseInt(input)));
         Mono<MyResponse> myResponseMono = myservice.m1(Integer.parseInt(input));
         return ServerResponse.ok().body(myResponseMono,MyResponse.class);
     }
